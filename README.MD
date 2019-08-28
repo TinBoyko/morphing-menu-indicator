@@ -8,6 +8,8 @@ To run that demo on your own computer:
 - `yarn`
 - Visit `http://localhost:3000/`
 
+Or visit https://tinboyko.github.io
+
 ## Usage
 
 ```html
