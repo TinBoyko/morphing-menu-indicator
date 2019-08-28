@@ -1,0 +1,119 @@
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/_variables';
+@import './node_modules/bootstrap/scss/mixins/breakpoints';
+
+
+body.menu-active {
+    .navigation {
+        .nav-menu {
+            transform: translateX(0);
+        }
+
+        .mobile-toggle {
+            span {
+                &:first-child {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                &:last-child {
+                    transform: rotate(135deg) translate(-5px, 5px);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.navigation {
+    .nav-menu {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 300px;
+        right: auto;
+        bottom: auto;
+        padding: 20px 0;
+        background-color: rgb(66, 66, 66);
+        transition: all .3s ease;
+        transform: translateX(-300px);
+
+        a {
+            display: block;
+            padding: 10px 25px;
+            color: #fff;
+            text-decoration: none !important;
+            transition: all .3s ease;
+            text-transform: uppercase;
+            font-weight: 500;
+            &:hover, &.active {
+                background-color: rgb(228, 22, 65);
+                color: #fff;
+            }
+        }
+
+        svg.animated-indicator {
+            display: none;
+        }
+    }
+
+    .mobile-toggle {
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        span {
+            transition: all .3s ease;
+            display: block;
+            width: 25px;
+            height: 2px;
+            margin: 5px 0;
+            background-color: rgb(66, 66, 66);
+            z-index: -1;
+        }
+    }
+}
+
+
+
+@include media-breakpoint-up(md) {
+    .navigation {
+        .nav-menu {
+            padding: 50px 0 50px 0;
+            transform: translateX(0);
+            background-color: transparent;
+            width: auto;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                padding: 20px 35px;
+                color: #333;
+                background-color: transparent !important;
+                &.active {
+                    color: #333;
+                }
+
+                &:hover,
+                &.active.hovered {
+                    color: #ffffff;
+                }
+            }
+            svg.animated-indicator {
+                display: block;
+            }
+        }
+        .mobile-toggle {
+            display: none;  
+        }
+    }
+}

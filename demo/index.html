@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Morphing menu indicator</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <nav role="navigation" class="nav-menu">
+            <a href="#" class="nav-link active" style="max-width: 940px;">Home</a>
+            <a href="#" class="nav-link" style="max-width: 940px;">About</a>
+            <a href="#" class="nav-link" style="max-width: 940px;">Contact</a>
+        </nav>
+        <button class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    </div>
+</body>
+<script src="morphingMenuIndicator.js"></script>
+<script>
+    new MorphingMenuIndicator('nav-menu')
+</script>
+
+</html>
